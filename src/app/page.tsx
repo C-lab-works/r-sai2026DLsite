@@ -1,65 +1,67 @@
 import Image from "next/image";
 
-export default function Home() {
+const ICON_URL = "https://r2.r-sai2026.site/revents.webp";
+const GOOGLEPLAY_QR_URL = "https://r2.r-sai2026.site/googleplayQR.webp";
+
+export default function Page() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-4 py-12 gap-10">
+
+      {/* タイトル */}
+      <div className="flex flex-col items-center gap-4">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+          src={ICON_URL}
+          alt="R-EVENTS アイコン"
+          width={80}
+          height={80}
+          className="rounded-2xl shadow-md"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+        <h1 className="text-2xl text-gray-800 font-bold">R-EVENTS</h1>
+        <p className="text-gray-700 text-sm">立命館慶祥 公式イベント案内アプリ</p>
+        <p className="text-gray-700 text-sm">2026年度立命祭の情報を掲載中!!</p>
+      </div>
+
+      {/* QR + ボタン（2列） */}
+      <div className="grid grid-cols-2 gap-8 w-full max-w-sm">
+
+        {/* iOS */}
+        <div className="flex flex-col items-center gap-4">
+          <Image
+            src="/images/ios_qr.webp"
+            alt="App Store QRコード"
+            width={140}
+            height={140}
+          />
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://apps.apple.com/jp/app/r-events/id6773613459"
             target="_blank"
             rel="noopener noreferrer"
+            className="w-full bg-gray-500 text-white text-center py-3 rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            App Store
           </a>
         </div>
-      </main>
-    </div>
+
+        {/* Android */}
+        <div className="flex flex-col items-center gap-4">
+          <Image
+            src={GOOGLEPLAY_QR_URL}
+            alt="Google Play QRコード"
+            width={140}
+            height={140}
+          />
+          {/* TODO: 審査通過後に正式なURLに差し替える */}
+          <a
+            href="https://play.google.com/store"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full bg-gray-500 text-white text-center py-3 rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors"
+          >
+            Google Play
+          </a>
+        </div>
+
+      </div>
+    </main>
   );
 }
