@@ -2,7 +2,7 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["2D3432455G"],
+        "appIDs": ["2D3432455G.works.clab.rsai"],
         "components": [
           { "/": "/event-details*" },
           { "/": "/food-details*" }
