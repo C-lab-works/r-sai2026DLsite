@@ -1,32 +1,14 @@
-"use client";
-import { useEffect, Suspense } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import type { Metadata } from "next";
+import { FoodDetailsRedirect } from "./redirect";
 
-function FoodDetailsRedirectInner() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
+export const metadata: Metadata = {
+  title: "R-EVENTS - 店舗詳細",
+  openGraph: {
+    title: "R-EVENTS - 共有された店舗を見る",
+    description: "立命館慶祥 公式イベント案内アプリ",
+  },
+};
 
-  useEffect(() => {
-    const id = searchParams.get("id");
-
-    // カスタムスキームでアプリを起動試行（インストール済みなら開く）
-    window.location.href = `rsaiapp://food-details${id ? `?id=${id}` : ""}`;
-
-    // アプリが開かなかった場合のみダウンロードページへ
-    const timer = setTimeout(() => {
-      router.replace("/");
-    }, 1500);
-
-    return () => clearTimeout(timer);
-  }, [router, searchParams]);
-
-  return null;
-}
-
-export default function FoodDetailsRedirect() {
-  return (
-    <Suspense>
-      <FoodDetailsRedirectInner />
-    </Suspense>
-  );
+export default function Page() {
+  return <FoodDetailsRedirect />;
 }
