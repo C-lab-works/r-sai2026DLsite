@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.rsai.app",
+      "sha256_cert_fingerprints": ["95:23:0C:A7:B5:A4:FB:36:D9:9C:54:51:8C:2D:58:2C:FC:0F:91:B6:F6:4D:6A:03:25:9C:ED:D9:F5:F5:D9:AD"]
+    }
+  }
+]

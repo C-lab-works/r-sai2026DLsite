@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["2D3432455G"],
+        "components": [
+          { "/": "/event-details*" },
+          { "/": "/food-details*" }
+        ]
+      }
+    ]
+  }
+}
