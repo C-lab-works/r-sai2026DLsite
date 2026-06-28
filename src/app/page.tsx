@@ -18,7 +18,7 @@ export default function Page() {
         />
         <h1 className="text-2xl text-gray-800 font-bold">R-EVENTS</h1>
         <p className="text-gray-700 text-sm">立命館慶祥 公式イベント案内アプリ</p>
-        <p className="text-gray-700 text-sm">2026年度立命祭の情報を掲載中!!</p>
+        <p className="text-gray-700 text-sm">現在は2026年度立命祭の情報を掲載中!!</p>
       </div>
 
       {/* QR + ボタン（2列） */}
