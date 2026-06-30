@@ -17,7 +17,7 @@ export default function Page() {
         />
         <h1 className="text-2xl text-gray-800 font-bold">R-EVENTS</h1>
         <p className="text-gray-700 text-sm">立命館慶祥 公式イベント案内アプリ</p>
-        <p className="text-gray-700 text-sm">現在は2026年度立命祭の情報を掲載中!!<br />※android版は近日中に公開予定です</p>
+        <p className="text-gray-700 text-sm">現在は2026年度立命祭の情報を掲載中!!</p>
       </div>
 
       {/* QR + ボタン（2列） */}
@@ -43,11 +43,20 @@ export default function Page() {
 
         {/* Android */}
         <div className="flex flex-col items-center gap-4">
-          <div className="w-[140px] h-[140px]" />
-          <div className="w-full bg-gray-300 text-gray-500 text-center py-3 rounded-xl text-sm font-medium cursor-not-allowed">
+          <Image
+            src="https://r2.r-sai2026.site/androidqr.webp"
+            alt="Google Play QRコード"
+            width={140}
+            height={140}
+          />
+          <a
+            href="https://play.google.com/store/apps/details?id=com.rsai.app&pcampaignid=web_share"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full bg-gray-500 text-white text-center py-3 rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors"
+          >
             Google Play
-            <p className="text-xs font-normal mt-0.5">現在審査中です</p>
-          </div>
+          </a>
         </div>
 
       </div>
