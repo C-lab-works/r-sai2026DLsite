@@ -37,7 +37,7 @@ export default function Page() {
             rel="noopener noreferrer"
             className="w-full bg-gray-500 text-white text-center py-3 rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors"
           >
-            App Store
+            App Store で開く
           </a>
         </div>
 
@@ -55,7 +55,7 @@ export default function Page() {
             rel="noopener noreferrer"
             className="w-full bg-gray-500 text-white text-center py-3 rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors"
           >
-            Google Play
+            Google Play で開く
           </a>
         </div>
 
