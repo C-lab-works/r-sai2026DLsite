@@ -4,7 +4,7 @@
     "target": {
       "namespace": "android_app",
       "package_name": "com.rsai.app",
-      "sha256_cert_fingerprints": ["95:23:0C:A7:B5:A4:FB:36:D9:9C:54:51:8C:2D:58:2C:FC:0F:91:B6:F6:4D:6A:03:25:9C:ED:D9:F5:F5:D9:AD"]
+      "sha256_cert_fingerprints": ["2c:e5:15:58:45:7d:d9:5d:ff:c3:51:8a:31:0f:79:48:60:ba:ea:8d:88:1b:ad:b0:81:d9:bc:a2:18:47:96:d1"]
     }
   }
 ]

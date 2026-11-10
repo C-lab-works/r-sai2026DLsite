@@ -27,7 +27,7 @@ function ArrowIcon() {
   return (
     <svg
       viewBox="0 0 24 24"
-      className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1"
+      className="h-4 w-4 shrink-0 transition-transform sm:h-5 sm:w-5 duration-200 group-hover:translate-x-1"
       fill="none"
       stroke="currentColor"
       strokeWidth={2.5}
@@ -60,11 +60,11 @@ export default function Page() {
           </p>
         </header>
 
-        <section className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2">
+        <section className="grid w-full grid-cols-2 gap-3 sm:gap-5">
           {STORES.map((s) => (
             <div
               key={s.key}
-              className="flex flex-col items-center gap-5 rounded-2xl border border-gray-200 bg-white p-6"
+              className="flex flex-col items-center gap-4 rounded-2xl border border-gray-200 bg-white p-3 sm:gap-5 sm:p-6"
             >
               <span className="text-xs font-bold tracking-widest text-gray-400">
                 {s.label}
@@ -75,16 +75,16 @@ export default function Page() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${s.cta}（QRコード）`}
-                className="transition-transform duration-200 hover:scale-105"
+                className="w-full max-w-[140px] transition-transform duration-200 hover:scale-105"
               >
-                <Image src={s.qr} alt={s.qrAlt} width={140} height={140} />
+                <Image src={s.qr} alt={s.qrAlt} width={140} height={140} className="h-auto w-full" />
               </a>
 
               <a
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group flex w-full items-center justify-center gap-2 rounded-xl px-5 py-4 text-base font-bold text-white transition-all duration-200 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 ${s.color}`}
+                className={`group flex w-full items-center justify-center gap-1 whitespace-nowrap rounded-xl px-1.5 py-3 text-[clamp(10px,3vw,16px)] font-bold text-white sm:gap-2 sm:px-5 sm:py-4 transition-all duration-200 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 ${s.color}`}
               >
                 {s.cta}
                 <ArrowIcon />
